@@ -78,7 +78,7 @@ module.exports = class UserDB {
             const user = {
                 email: awsResponse?.Item?.email?.S,
                 password: awsResponse?.Item?.password?.S,
-                id: awsResponse?.Item?.id?.S,
+                type: awsResponse?.Item?.type?.S,
             };
 
             resolve(method == 'get' ? user : null);
